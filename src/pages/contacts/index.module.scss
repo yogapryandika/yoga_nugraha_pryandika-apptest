@@ -1,0 +1,179 @@
+.contactContainer {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+
+  .contactCard {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: -11px 22px 57px 6px rgba(151, 151, 151, 0.75);
+    overflow: hidden;
+
+    .addButtonContainer {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      .addButton {
+        cursor: pointer;
+        position: sticky;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        background-color: #366bff;
+        margin: 2.5rem;
+        font-size: 3rem;
+        box-shadow: -11px 22px 57px 6px rgba(151, 151, 151, 0.75);
+      }
+    }
+
+    .cardHeader {
+      height: 50px;
+      width: 100%;
+      background-color: #366bff;
+      padding: 5px 3rem;
+
+      h2 {
+        font-size: 2.5rem;
+        color: #fff;
+        font-weight: 600;
+      }
+    }
+
+    .cardContent {
+      background-color: #fff;
+      padding: 0.8rem 1.6rem;
+      height: 500px;
+      overflow-y: scroll;
+
+      .cardItem {
+        position: relative;
+
+        .container {
+          display: flex;
+          justify-content: space-between;
+
+          .cardItemContainer {
+            display: flex;
+            gap: 1.6rem;
+            align-items: center;
+            width: 100%;
+            cursor: pointer;
+
+            .profileContainer {
+              img {
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+                border-radius: 50%;
+              }
+
+              .photoNotAvailable {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                word-wrap: break-word;
+                width: 100px;
+                height: 100px;
+                padding: 30px;
+                text-align: center;
+                border-radius: 50%;
+                background-color: #adadad;
+                font-weight: 600;
+              }
+            }
+
+            .profileTextContainer {
+              h3 {
+                font-size: 2rem;
+                font-weight: 600;
+              }
+
+              p {
+                font-size: 1.6rem;
+              }
+            }
+          }
+
+          .buttonDelete {
+            position: absolute;
+            cursor: pointer;
+            right: 0;
+            top: 50%;
+            background-color: #ff0303;
+            border: none;
+            color: #fff;
+            padding: 4px 8px;
+            border-radius: 5px;
+            transform: translateY(-50%);
+          }
+        }
+
+        hr {
+          border-top: 1px solid #adadad;
+          margin: 1.6rem 0;
+        }
+
+        &:last-of-type>hr {
+          border: none;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+.addContactContainer {
+  position: relative;
+
+  .closeButton {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+  }
+}
+
+.deleteContactContainer {
+  display: flex;
+  height: 100px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .deleteButtonContainer {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1.6rem;
+
+    .btn {
+      &Delete {
+        border: none;
+        padding: 4px 8px;
+        background-color: #ff0303;
+        color: #fff;
+        border-radius: 5px;
+        transition: all .2s ease;
+
+        &:disabled {
+          background-color: #adadad;
+        }
+      }
+
+      &Cancel {
+        border: none;
+        padding: 4px 8px;
+        border-radius: 5px;
+      }
+    }
+  }
+}

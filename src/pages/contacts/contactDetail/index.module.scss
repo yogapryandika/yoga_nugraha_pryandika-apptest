@@ -1,0 +1,95 @@
+.detailContainer {
+  overflow: hidden;
+
+  .detailSection {
+    height: 150px;
+    transition: all .2s ease;
+
+    .pictureContainer {
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      .photoNotAvailable {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        word-wrap: break-word;
+        width: 100px;
+        height: 100px;
+        padding: 30px;
+        text-align: center;
+        border-radius: 50%;
+        background-color: #adadad;
+        font-weight: 600;
+      }
+    }
+
+    .textContainer {
+      text-align: center;
+
+      h2 {
+        font-size: 2rem;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 1.6rem;
+      }
+    }
+
+    &.detailEdit {
+      height: 0;
+      visibility: hidden;
+    }
+  }
+
+  .editContainer {
+    transition: all .2s ease;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    background-color: #fff;
+
+    &.editActive {
+      height: 350px;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+    margin-top: 1.5rem;
+
+    .editButton {
+      background-color: #006909;
+      color: #fff;
+      font-size: 1rem;
+      padding: 4px 8px;
+      border-radius: 5px;
+      width: fit-content;
+      cursor: pointer;
+    }
+
+    .closeButton {
+      cursor: pointer;
+      background-color: #c20000;
+      color: #fff;
+      font-size: 1rem;
+      padding: 4px 8px;
+      border-radius: 5px;
+      width: fit-content;
+    }
+  }
+}
